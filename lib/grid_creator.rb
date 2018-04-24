@@ -23,4 +23,9 @@ class GridCreator
     end
     edges
   end
+
+  def horizontal_edge_printer
+    print @horizontal_edges.join('')
+  end
+
 end

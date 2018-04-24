@@ -34,4 +34,13 @@ describe GridCreator do
     end
   end
 
+  describe '#horizontal_edge_printer' do
+    before(:each) do
+      grid_creator.horizontal_edge_generator
+    end
+    it 'prints horizontal edges to the console in the correct format' do
+      expect{grid_creator.horizontal_edge_printer}.to output('--').to_stdout
+    end
+  end
+
 end
