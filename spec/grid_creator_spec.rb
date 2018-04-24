@@ -2,7 +2,7 @@ require 'grid_creator'
 
 describe GridCreator do
   subject(:grid_creator) { described_class.new(4, 4) }
-  subject(:small_grid) { described_class.new(2,2) }
+  subject(:small_grid) { described_class.new(2, 2) }
 
   describe '#initialize' do
     it 'initializes with a height' do
@@ -34,23 +34,6 @@ describe GridCreator do
     end
   end
 
-  describe '#horizontal_edge_printer' do
-    before(:each) do
-      grid_creator.horizontal_edge_generator
-    end
-    it 'prints horizontal edges to the console in the correct format' do
-      expect{grid_creator.horizontal_edge_printer}.to output('--').to_stdout
-    end
-  end
 
-  describe '#vertical_edge_printer' do
-    before(:each) do
-      grid_creator.vertical_edge_generator
-    end
-
-    it 'prints vertical edges to the console in the correct format' do
-      expect{ grid_creator.vertical_edge_printer }.to output("|\n|\n").to_stdout
-    end
-  end
 
 end
