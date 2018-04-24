@@ -6,4 +6,8 @@ describe GridCreator do
   it "initializes with a height" do
     expect(grid_creator.height).to eq 4
   end
+
+  it "initializes with a width" do
+    expect(grid_creator.width).to eq 4
+  end
 end
