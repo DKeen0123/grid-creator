@@ -28,4 +28,10 @@ class GridCreator
     print @horizontal_edges.join('')
   end
 
+  def vertical_edge_printer
+    @vertical_edges.each do |edge|
+      puts edge
+    end
+  end
+
 end

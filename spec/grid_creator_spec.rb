@@ -43,4 +43,14 @@ describe GridCreator do
     end
   end
 
+  describe '#vertical_edge_printer' do
+    before(:each) do
+      grid_creator.vertical_edge_generator
+    end
+
+    it 'prints vertical edges to the console in the correct format' do
+      expect{ grid_creator.vertical_edge_printer }.to output("|\n|\n").to_stdout
+    end
+  end
+
 end
