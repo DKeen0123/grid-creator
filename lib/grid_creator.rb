@@ -8,23 +8,19 @@ class GridCreator
   end
 
   def vertical_edge_generator
-    @vertical_edges = []
-    if @height <= 2
-      return 0
-    else
-      (@height - 2).times { @vertical_edges.push('|')}
-      return @vertical_edges
-    end
+    @vertical_edges = edge_generator('|', @height)
   end
 
   def horizontal_edge_generator
-    @horizontal_edges = []
-    if @width <= 2
-      return 0
-    else
-      (@width - 2).times { @horizontal_edges.push('-')}
-      return @horizontal_edges
-    end
+    @horizontal_edges = edge_generator('-', @width)
   end
 
+  def edge_generator(edge_type, height_or_width)
+    edges = []
+    return 0 if height_or_width <= 2
+    (height_or_width - 2).times do
+      edges.push(edge_type)
+    end
+    edges
+  end
 end
