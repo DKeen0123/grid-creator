@@ -18,6 +18,10 @@ describe GridCreator do
     it 'returns no vertical_edges if height is 2 or less' do
       expect(small_grid.vertical_edge_generator).to eq 0
     end
+
+    it 'returns height - 2 vertical edges' do
+      expect(grid_creator.vertical_edge_generator).to eq ['|', '|']
+    end
   end
 
 end

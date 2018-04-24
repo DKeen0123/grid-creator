@@ -8,7 +8,13 @@ class GridCreator
   end
 
   def vertical_edge_generator
-    0
+    @vertical_edges = []
+    if @height <= 2
+      return 0
+    else
+      (@height - 2).times { @vertical_edges.push('|')}
+      return @vertical_edges
+    end
   end
 
 end
