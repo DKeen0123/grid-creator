@@ -9,8 +9,9 @@ class GridPrinter
   end
 
   def vertical_edge_printer
+    spaces = ' ' * @horizontal_edges.length
     @vertical_edges.each do |edge|
-      puts edge
+      puts edge + spaces + edge
     end
   end
 end
