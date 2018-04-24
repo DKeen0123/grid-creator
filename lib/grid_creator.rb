@@ -17,4 +17,14 @@ class GridCreator
     end
   end
 
+  def horizontal_edge_generator
+    @horizontal_edges = []
+    if @width <= 2
+      return 0
+    else
+      (@width - 2).times { @horizontal_edges.push('-')}
+      return @horizontal_edges
+    end
+  end
+
 end
