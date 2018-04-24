@@ -6,4 +6,9 @@ class GridCreator
     @height = height
     @width = width
   end
+
+  def vertical_edge_generator
+    0
+  end
+
 end
