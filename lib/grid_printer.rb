@@ -5,7 +5,7 @@ class GridPrinter
   end
 
   def horizontal_edge_printer
-    print @horizontal_edges.join('')
+     @horizontal_edges.join('')
   end
 
   def vertical_edge_printer
@@ -13,5 +13,11 @@ class GridPrinter
     @vertical_edges.each do |edge|
       puts edge + spaces + edge
     end
+  end
+
+  def print_full_grid
+    print "\u250C#{horizontal_edge_printer}\u2510\n"
+    vertical_edge_printer
+    print "\u2514#{horizontal_edge_printer}\u2518"
   end
 end
