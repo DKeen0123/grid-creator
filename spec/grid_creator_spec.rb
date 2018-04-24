@@ -33,7 +33,4 @@ describe GridCreator do
       expect(grid_creator.horizontal_edge_generator).to eq ['-', '-']
     end
   end
-
-
-
 end

@@ -1,5 +1,4 @@
 class GridCreator
-
   attr_reader :height, :width
 
   def initialize(width, height)
@@ -15,6 +14,8 @@ class GridCreator
     @horizontal_edges = edge_generator('-', @width)
   end
 
+  private
+
   def edge_generator(edge_type, height_or_width)
     edges = []
     return 0 if height_or_width <= 2
@@ -23,5 +24,4 @@ class GridCreator
     end
     edges
   end
-
 end
