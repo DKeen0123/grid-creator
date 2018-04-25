@@ -1,7 +1,7 @@
 class GridPrinter
-  def initialize(horizontal_edges, vertical_edges)
-    @horizontal_edges = horizontal_edges
-    @vertical_edges = vertical_edges
+  def initialize(edge_generator)
+    @horizontal_edges = edge_generator.horizontal_edge_generator
+    @vertical_edges = edge_generator.vertical_edge_generator
   end
 
   def horizontal_edge_printer

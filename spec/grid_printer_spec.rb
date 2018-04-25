@@ -3,8 +3,12 @@ require 'grid_printer'
 describe GridPrinter do
   vertical_edges = ['|', '|']
   horizontal_edges = ['-', '-']
+  let(:edge_generator) {
+     double 'edge generator', :vertical_edge_generator => vertical_edges, :horizontal_edge_generator => horizontal_edges
+     }
+
   subject(:grid_printer) do
-    described_class.new(horizontal_edges, vertical_edges)
+    described_class.new(edge_generator)
   end
 
   describe '#horizontal_edge_printer' do
