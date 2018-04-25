@@ -1,10 +1,8 @@
-class GridCreator
-  attr_reader :height, :width
+class EdgeGenerator
 
-  def initialize(width, height)
+  def initialize(height, width)
     @height = height
     @width = width
-
   end
 
   def vertical_edge_generator
