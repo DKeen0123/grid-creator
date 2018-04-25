@@ -1,7 +1,7 @@
 class GridCreator
   attr_reader :height, :width
 
-  def initialize(width, height)
+  def initialize(height, width)
     @height = height
     @width = width
   end
